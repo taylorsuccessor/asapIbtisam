@@ -1,0 +1,21 @@
+{
+    "name": "toptal/module-customwidget",
+    "description": "Create Custom Widget for Magento2",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "email": "vivek.khatri@toptal.com",
+            "name": "Vivek Khatri"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Toptal\\CustomWidget\\": ""
+        }
+    }
+}
