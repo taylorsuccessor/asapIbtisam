@@ -98,7 +98,8 @@ width:auto!important;
 
 body{ float:left; width:100%; height:auto; font-family: 'open_sansregular'; padding:0px; margin:0px;
 color:#333; font-size:13px; overflow-x:hidden; }
-.cms-home main#maincontent{width: 100%;  position: relative; top: -50px;  max-width: 100%;margin: 0px;padding: 0px;}
+.cms-home main#maincontent{width: 100%;  position: relative; top: 0px;  max-width: 100%;margin: 0px;padding: 0px;border-top: 3px solid #9a895e;}
+.cms-home div.column.main p { float: left;}
 .wrapper{ float:left; width:100%; height:auto;}
 header{ float:left; width:100%; height:auto;}
 header.page-header{margin-top:0px;  margin-bottom: 0px; padding-bottom: 0px;}
@@ -254,11 +255,11 @@ background-image: url('../images/sprite.png'); background-position:0px -146px; b
 .srch_box{ float:right; margin-top:0px; width:100%; min-width:300px; height:45px; border:3px solid #9a895e; padding-left:10px; outline:none !important; font-family: 'Open Sans'; font-style:italic; font-size:14px; display:none; position:relative;
 z-index:99;}
 .banner{ float:left; width:100%; border-top:3px solid #9a895e;}
-.banner .container{ position:relative;}
-.caption_wrap{ float:left; position:absolute; left:0px; z-index:100; top:26%; max-width:600px;}
+.flexslider  .container{ margin-left:3%}
+.caption_wrap{ float:left; position:absolute; left:15%; z-index:100; top:26%; max-width:600px;}
 .caption_wrap h2{ float:left; font-family: 'Playfair Display'; color:#fff; font-size:55px; text-shadow:0px 1px 6px #666; margin-bottom:30px; width:100%;  }
 .caption_wrap h2 span{ float:left; width:100%; font-size:84px; color:#fff; font-family: 'Playfair Display'; font-weight:bold; margin-top:5px;}
-.caption_wrap a{ float:left; font-size:16px; color:#fff; text-transform:uppercase; padding:11px 26px; border:2px solid #fff; transition:ease-in-out 0.2s; -moz-transition:ease-in-out 0.2s; -webkit-transition:ease-in-out 0.2s;}
+.caption_wrap a{ height: inherit !important; float:left; font-size:16px; color:#fff; text-transform:uppercase; padding:11px 26px; border:2px solid #fff; transition:ease-in-out 0.2s; -moz-transition:ease-in-out 0.2s; -webkit-transition:ease-in-out 0.2s;}
 .caption_wrap a:hover{ background-color:#1e191a; color:#fff; text-decoration:none; transition:ease-in-out 0.3s; -moz-transition:ease-in-out 0.2s; -webkit-transition:ease-in-out 0.2s;}
 
 .content_wrapper{ float:left; width:100%; height:auto;}
@@ -958,8 +959,15 @@ footer.page-footer{background: #fff;}
 
 .page-header + .sections.nav-sections + .widget { margin:0px; width:100%; max-width:100%; padding:0px; height: auto; border-top: 3px solid #9a895e; margin-bottom: 45px;}
 .page-header + .sections.nav-sections {display:none;}
-.cms-home .sections.nav-sections + .widget  {display:none;}
-.page-header + .sections.nav-sections + .widget img{width:100%;}
+.cms-home .sections.nav-sections + .magestore-bannerslider + .widget  {display:none;}
+.page-header + .sections.nav-sections + .magestore-bannerslider + .widget {     max-width: inherit; padding: 0px; margin: 0px; width: 100%;}
+.page-header + .sections.nav-sections + .magestore-bannerslider + .widget img{width:100%;}
+.page-header + .sections.nav-sections + .magestore-bannerslider + .widget p img{width:100%;}
 .block-search .action.search:before{content:"" !important;}
 .column.main p{text-align: justify;}
+
+.flex-control-nav {display:none;}
+.flex-direction-nav {display:none;}
+.flexslider{box-shadow:none !important; border-radius:0px !important; border:0px !important;}
+.minicart-wrapper .action.showcart .counter.qty.empty{display:black !important}
 

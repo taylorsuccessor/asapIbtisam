@@ -5,10 +5,11 @@ var config = {
     "js/main",   
   ],
  paths: {
-    'slick': 'js/responsiveslides.min',
     'reveal': 'js/jquery.reveal',
     'video': 'js/jquery.vticker-min',
-	'simplegallery': "js/simplegallery.min",
+	'owlcarousel': 'js/owl.carousel',
+	'simplegallery': 'js/simplegallery.min',
+
   },   
   
 

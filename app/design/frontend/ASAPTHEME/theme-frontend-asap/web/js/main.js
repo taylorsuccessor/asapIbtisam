@@ -1,9 +1,10 @@
 define([
   "jquery",
-  'slick',
   'reveal',
   'video',
+  'owlcarousel',
   'simplegallery',
+  
 ], 
 function($) {
   "use strict";
@@ -14,6 +15,7 @@ function($) {
         $('.srch_box').slideToggle();
     });
   // Slideshow 1
+  /*
       $("#slider1").responsiveSlides({
         auto: true,
         pager: false,
@@ -21,7 +23,7 @@ function($) {
         speed: 1900,
         namespace: "centered-btns"
       });
-	  
+	  */
 	  // fade in #back-top
 	  
 		$(window).scroll(function () {
@@ -47,11 +49,30 @@ function($) {
 		showItems: 1,
 		autoplay:'true'
 	});
+	$("#owl-demo2").owlCarousel({
+      navigation : true,
+	  autoPlay: false, //Set AutoPlay to 3 seconds 
+      slideSpeed : 800,
+      paginationSpeed : 400,
+      singleItem : true
+      // "singleItem:true" is a shortcut for:
+      //  items : 1,
+      // itemsDesktop : false,
+      // itemsDesktopSmall : false,
+      // itemsTablet: false,
+      // itemsMobile : false
+    });
+				
+	$("#owl-demo").owlCarousel({
+        navigation:true,
+        afterInit : function(elem){
+			var that = this
+			that.owlControls.prependTo(elem)
+        }
+      });
+	  
+	  
 	
-	
-  
-   
-    
   return;
 });
 

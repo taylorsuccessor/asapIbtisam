@@ -17,6 +17,8 @@
 		<css src="css/themes.css" />
 		<css src="css/reveal.css" />
 		
+		<css src="css/owl.carousel.css" />
+		<css src="css/owl.theme.css" />
 		
 		<css src="css/simplegallery.demo1.min.css" />
 		<css src="css/bootstrap-select.css" />
@@ -24,10 +26,19 @@
 		<css src="fonts/stylesheet.css" />
 		<css src="css/inner-style.css" />
 		
-		
     </head>
 	
   <body>
+  <!--
+		<referenceContainer name="content">
+		<block class="Magento\Cms\Block\Block" name="Store Information">
+		<arguments>
+		<argument name="block_id" xsi:type="string">store_information</argument>
+		</arguments>
+		</block>
+		</referenceContainer> -->
+
+
   <referenceContainer name="header.panel" remove="true">
 		<block class="Magento\Framework\View\Element\Html\Links" name="header.links">
                 <arguments>

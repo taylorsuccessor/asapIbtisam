@@ -91,6 +91,8 @@ class Faq extends \Magento\Framework\View\Element\Template
 
         $breadcrumbBlock = $this->getLayout()->getBlock('breadcrumbs');
 
+		
+		/*
         $breadcrumbBlock->addCrumb(
             'home',
             [
@@ -106,7 +108,7 @@ class Faq extends \Magento\Framework\View\Element\Template
                 'label' => __('FAQ'),
                 'title' => __('FAQ')
             ]
-        );
+        ); */
 
         return parent::_prepareLayout();
     }

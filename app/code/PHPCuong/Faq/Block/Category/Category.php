@@ -63,14 +63,21 @@ class Category extends \Magento\Framework\View\Element\Template
         CategoryHelper $categoryHelper,
         FaqCatResourceModel $faqCatResourceModel,
         FaqResourceModel $faqResourceModel,
-        ConfigHelper $configHelper
+        ConfigHelper $configHelper,
+		array $data = []
     ) {
         $this->_categoryHelper = $categoryHelper;
         $this->_faqCatResourceModel = $faqCatResourceModel;
         $this->_faqResourceModel = $faqResourceModel;
         $this->_configHelper = $configHelper;
-        parent::__construct($context);
+        parent::__construct($context, $data);
     }
+	
+	
+
+  
+  
+  
 
     /**
      * Get FAQs Category
@@ -89,7 +96,7 @@ class Category extends \Magento\Framework\View\Element\Template
     protected function _prepareLayout()
     {
         $breadcrumbsBlock = $this->getLayout()->getBlock('breadcrumbs');
-
+/*
         $breadcrumbsBlock->addCrumb(
             'home',
             [
@@ -106,14 +113,14 @@ class Category extends \Magento\Framework\View\Element\Template
                 'title' => __('Go to FAQ Page'),
                 'link'  => $this->_storeManager->getStore()->getBaseUrl().FaqResourceModel::FAQ_REQUEST_PATH
             ]
-        );
+        );*/
 
         $faqCategory = $this->getFaqCategory();
 
         $this->_faqCategoryTitle = $faqCategory['title'];
 
         $this->_faqCategoryIcon = $faqCategory['image'];
-
+/*
         $breadcrumbsBlock->addCrumb(
             'faq.category',
             [
@@ -121,7 +128,7 @@ class Category extends \Magento\Framework\View\Element\Template
                 'title' => $faqCategory['title']
             ]
         );
-
+*/
         $this->pageConfig->setKeywords($faqCategory['meta_keywords']? $faqCategory['meta_keywords'] : $faqCategory['title']);
 
         $this->pageConfig->setDescription($faqCategory['meta_description']? $faqCategory['meta_description'] : $faqCategory['title']);

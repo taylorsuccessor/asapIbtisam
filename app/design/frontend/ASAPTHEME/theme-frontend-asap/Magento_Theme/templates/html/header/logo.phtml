@@ -10,17 +10,44 @@
  * @var \Magento\Theme\Block\Html\Header\Logo $block
  */
 ?>
+<?php
+/*
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();        
+ 
+$storeManager = $objectManager->get('\Magento\Store\Model\StoreManagerInterface');
+ 
+//var_dump($storeManager->getStore()->getData());
+echo $storeManager->getStore()->getStoreId() . '<br />';
+echo $storeManager->getStore()->getCode() . '<br />';
+echo $storeManager->getStore()->getWebsiteId() . '<br />';
+echo $storeManager->getStore()->getName() . '<br />';
+echo $storeManager->getStore()->getStoreUrl() . '<br />';*/
+?>
+
+
+<?php
+$this->_objectManager      = \Magento\Framework\App\ObjectManager::getInstance(); //object manager you can also get from constructor   
+    $categoryFactory = $this->_objectManager->create('Magento\Catalog\Model\ResourceModel\Category\CollectionFactory');
+    $_categories     = $categoryFactory->create()->addAttributeToSelect('*');
+	
+foreach($_categories as $category){
+        $optionsValue[] = ['label' => $category->getName()];//get your required value
+		
+		echo "<a href='".$category->getUrl()."'>".$category->getName()."</a><br/>".$category->getParent();
+    }
+   //print_r($optionValue);
+?>
 
 <?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<?php $storePhone = $block->getPhoneNumber() ;?>
+<?php $storeHours = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
 
 	<article class="container">
 	<div class="main_top">
         <div class="row">
         <aside class="col-md-5 left_top">
-        	<div class="phone_ex"><h4>+1(000) 2345-6789</h4>
-            <h6>7 Days a week from 9:00 am to 7:00 pm</h6></div>
+        	<div class="phone_ex"><?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('store_information')->toHtml();?></div>
 			
-
     		<ul class="account_link">
     			<li><?php
     $objectManagerlogin = \Magento\Framework\App\ObjectManager::getInstance();
@@ -435,10 +462,10 @@
           </ul>
 
         </li>	
-					<li><a href="offer.html">Offers</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="online-booking.html">Book an Appointment</a></li>
-                    <li><a href="contact-us.html">Contact US</a></li>
+					<li><a href="#">Offers</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Book an Appointment</a></li>
+                    <li><a href="<?php echo $baseurl .'contact'; ?>">Contact US</a></li>
 
       </ul>
 
@@ -456,6 +483,9 @@
     <!--nav-->
 
 	</article>
+	
+	
+	
 	
 	<p id="back-top">
 		<a href="#top" title="Back to Top"><span></span></a>

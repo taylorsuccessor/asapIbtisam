@@ -93,7 +93,7 @@ class Search extends \Magento\Framework\View\Element\Template
     {
 
         $breadcrumbBlock = $this->getLayout()->getBlock('breadcrumbs');
-
+/*
         $breadcrumbBlock->addCrumb(
             'home',
             [
@@ -118,7 +118,7 @@ class Search extends \Magento\Framework\View\Element\Template
                 'label' => __('Search: ').$this->getTextSearch(),
                 'title' => __('Search: ').$this->getTextSearch()
             ]
-        );
+        ); */
 
         $this->pageConfig->getTitle()->set(__('FAQ'));
 
